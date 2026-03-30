@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreyans Prajapati | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ========== MESH BACKGROUND ========== -->
+  <div class="mesh-bg">
+    <div class="mesh-orb orb1"></div>
+    <div class="mesh-orb orb2"></div>
+    <div class="mesh-orb orb3"></div>
+    <div class="mesh-orb orb4"></div>
+  </div>
+
+  <!-- ========== THREE.JS 3D CANVAS (ONLY hero section) ========== -->
+  <canvas id="threeCanvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Shreyans</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"      class="nav-link active">Home</a></li>
+        <li><a href="#about"     class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills"    class="nav-link">Skills</a></li>
+        <li><a href="#projects"  class="nav-link">Projects</a></li>
+        <li><a href="#working"   class="nav-link">Working On</a></li>
+        <li><a href="#contact"   class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION (3D canvas active here) ========== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-greeting animate-fade-up" style="--delay:0.1s">Hello, Myself 👋</p>
+      <h1 class="hero-name animate-fade-up" style="--delay:0.25s">Shreyans Prajapati</h1>
+      <div class="hero-typed animate-fade-up" style="--delay:0.4s">
+        <span class="typed-prefix">I'm a </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-desc animate-fade-up" style="--delay:0.55s">
+        "Designing clean interfaces and bringing them to life with code."
+"Focused on building modern, responsive, and user-friendly web experiences."
+      </p>
+      <div class="hero-buttons animate-fade-up" style="--delay:0.7s">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-socials animate-fade-up" style="--delay:0.85s">
+        <a href="https://github.com/"    target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/"  target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/_shreya_nsh?igsh=eDR4dGZrMnRzaXpm" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/918957144876" target="_blank" class="social-icon whatsapp-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <div class="social-divider"></div>
+        <!-- Direct PDF download — no modal, no generator -->
+        <a href="SHREYANS PRAJAPATI( RESUME).pdf" download="SHREYANS PRAJAPATI( RESUME)" class="cv-btn">
+          <i class="fas fa-file-pdf"></i>
+          <span>Download CV</span>
+        </a>
+      </div>
+      <p class="canvas-hint animate-fade-up" style="--delay:1.1s">
+        <i class="fas fa-hand-pointer"></i> Drag / touch the 3D setup to rotate
+      </p>
+    </div>
+
+    <!-- Floating info card -->
+    <div class="hero-info-card glass animate-fade-left" style="--delay:0.5s">
+      <div class="card-orb card-orb1"></div>
+      <div class="card-orb card-orb2"></div>
+      <div class="floating-tags">
+        <div class="tag tag1"><i class="fab fa-html5"></i> HTML5</div>
+        <div class="tag tag2"><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="tag tag3"><i class="fab fa-js"></i> JavaScript</div>
+        <div class="tag tag4"><i class="fab fa-python"></i> Python</div>
+        <div class="tag tag5"><i class="fab fa-java"></i> Java</div>
+        <div class="tag tag6"><i class="fas fa-database"></i> MySQL</div>
+      </div>
+      <div class="code-snippet">
+        <div class="code-dot dot-r"></div>
+        <div class="code-dot dot-y"></div>
+        <div class="code-dot dot-g"></div>
+        <pre><code><span class="c-pink">const</span> <span class="c-blue">developer</span> = {
+  <span class="c-green">name</span>: <span class="c-yellow">"Shreyans Prajapati"</span>,
+  <span class="c-green">email</span>: <span class="c-yellow">"shreyans@gmail.com"</span>,
+  <span class="c-green">degree</span>: <span class="c-yellow">"BCA Final Year"</span>,
+  <span class="c-green">available</span>: <span class="c-pink">true</span>
+};</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3D CANVAS ENDS AT HERO — rest of page is normal ===== -->
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">About Me</span>
+        <h2 class="section-title">Who <span class="grad-text">Am I?</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <h3>BCA Final Year Student & Frontend Developer</h3>
+          <p>I'm Shreyans Prajapati, a passionate BCA student in my final year, deeply interested in frontend development and UI design. I love building clean, responsive interfaces that not only look great but also provide an exceptional user experience.</p>
+          <p>My journey in tech started with curiosity and grew into a full-fledged passion. I've explored languages like C, C++, Python, and Java, while my heart belongs to the web — HTML, CSS, and JavaScript are my playground.</p>
+          <p>My goal is to become a skilled full-stack developer and work on products that make a real difference. I'm always learning, always building, and always pushing my limits.</p>
+          <div class="about-stats">
+            <div class="stat-item"><span class="stat-num grad-text">3+</span><span class="stat-label">Projects Built</span></div>
+            <div class="stat-item"><span class="stat-num grad-text">5+</span><span class="stat-label">Technologies</span></div>
+            <div class="stat-item"><span class="stat-num grad-text">2026</span><span class="stat-label">Graduating</span></div>
+          </div>
+        </div>
+        <div class="about-visual reveal-right">
+          <div class="about-card glass">
+            <div class="about-ring ring1"></div>
+            <div class="about-ring ring2"></div>
+            <div class="about-ring ring3"></div>
+            <div class="about-inner">
+              <div class="about-avatar"><span class="avatar-initials">SP</span></div>
+              <div class="about-info-list">
+                <div class="about-info-item"><i class="fas fa-graduation-cap"></i><span>BCA — Final Year</span></div>
+                <div class="about-info-item"><i class="fas fa-envelope"></i><span>shreyansprajapati7081@gmail.com</span></div>
+                <div class="about-info-item"><i class="fas fa-phone"></i><span>+91 8957144876</span></div>
+                <div class="about-info-item"><i class="fas fa-briefcase"></i><span>Open to Opportunities</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Academic Journey</span>
+        <h2 class="section-title">My <span class="grad-text">Education</span></h2>
+      </div>
+      <div class="edu-timeline">
+
+        <!-- BCA -->
+        <div class="edu-card glass reveal">
+          <div class="edu-icon-wrap">
+            <div class="edu-icon"><i class="fas fa-university"></i></div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-body">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+                <p class="edu-institute">
+                  <!-- College logo placeholder — change src to your college logo -->
+                  <img src="https://ptu.ac.in/wp-content/themes/cynic/images/classic-logo.png" class="edu-logo" alt="College Logo" />
+                  College Name — GCS Institute of vocational studies, bhaddal
+                </p>
+              </div>
+              <span class="edu-year">2024 – 2026</span>
+            </div>
+            <p class="edu-desc">Currently pursuing BCA with a focus on web development, database management, and programming. Building real-world projects using HTML, CSS, JavaScript, and exploring backend technologies to become a full-stack developer.</p>
+            <div class="edu-tags">
+              <span class="badge">Web Development</span>
+              <span class="badge">DBMS</span>
+              <span class="badge">OOP</span>
+              <span class="badge">Software Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class 12 -->
+        <div class="edu-card glass reveal">
+          <div class="edu-icon-wrap">
+            <div class="edu-icon"><i class="fas fa-school"></i></div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-body">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">Class XII — Commerce</h3>
+                <p class="edu-institute">
+                  <!-- UP Board logo -->
+                  <img src="https://static.toiimg.com/thumb/msid-120588601,width-400,resizemode-4/UP-Board.jpg"
+                       class="edu-logo" alt="UP Board Logo"
+                       onerror="this.src='https://via.placeholder.com/22x22/6366f1/ffffff?text=UP'" />
+                  Uttar Pradesh Madhyamik Shiksha Parishad (UP Board)
+                </p>
+              </div>
+              <span class="edu-year">2021</span>
+            </div>
+            <p class="edu-desc">Completed Class 12 with Commerce stream from UP Board. Gained foundational knowledge in business studies, accountancy, and economics, while developing analytical and problem-solving skills.</p>
+            <div class="edu-tags">
+              <span class="badge">Commerce</span>
+              <span class="badge">Accountancy</span>
+              <span class="badge">Economics</span>
+              <span class="badge">Business Studies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class 10 -->
+        <div class="edu-card glass reveal">
+          <div class="edu-icon-wrap">
+            <div class="edu-icon"><i class="fas fa-book-open"></i></div>
+          </div>
+          <div class="edu-body">
+            <div class="edu-header">
+              <div>
+                <h3 class="edu-degree">Class X — Secondary Education</h3>
+                <p class="edu-institute">
+                  <img src="https://static.toiimg.com/thumb/msid-120588601,width-400,resizemode-4/UP-Board.jpg"
+                       class="edu-logo" alt="UP Board Logo"
+                       onerror="this.src='https://via.placeholder.com/22x22/ec4899/ffffff?text=UP'" />
+                  Uttar Pradesh Madhyamik Shiksha Parishad (UP Board)
+                </p>
+              </div>
+              <span class="edu-year">2019</span>
+            </div>
+            <p class="edu-desc">Passed Class 10 from UP Board with strong performance. Built a solid academic foundation in science, mathematics, and English that shaped my thinking and helped me pursue a technology-focused career.</p>
+            <div class="edu-tags">
+              <span class="badge">Science</span>
+              <span class="badge">Mathematics</span>
+              <span class="badge">English</span>
+              <span class="badge">Social Science</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Technical Skills</span>
+        <h2 class="section-title">My <span class="grad-text">Toolkit</span></h2>
+      </div>
+      <div class="skills-categories">
+        <div class="skill-category reveal">
+          <h3 class="category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#6c63ff;--c2:#a855f7"><i class="fas fa-c"></i></div><span class="skill-name">C</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#a855f7;--c2:#ec4899"><span>C++</span></div><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div></div>
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#f59e0b;--c2:#ef4444"><i class="fab fa-java"></i></div><span class="skill-name">Java <small></small></span><div class="skill-bar"><div class="skill-fill" style="--w:55%"></div></div></div>
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#3b82f6;--c2:#06b6d4"><i class="fab fa-python"></i></div><span class="skill-name">Python <small></small></span><div class="skill-bar"><div class="skill-fill" style="--w:60%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="category-title"><i class="fas fa-globe"></i> Web Technologies</h3>
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#e44d26;--c2:#f16529"><i class="fab fa-html5"></i></div><span class="skill-name">HTML5</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#264de4;--c2:#2965f1"><i class="fab fa-css3-alt"></i></div><span class="skill-name">CSS3</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#f7df1e;--c2:#f0db4f"><i class="fab fa-js"></i></div><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="category-title"><i class="fas fa-database"></i> Database & Tools</h3>
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#00758f;--c2:#f29111"><i class="fas fa-database"></i></div><span class="skill-name">MySQL</span><div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div></div>
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#007acc;--c2:#0ea5e9"><i class="fas fa-code"></i></div><span class="skill-name">VS Code</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div></div>
+            <div class="skill-card glass"><div class="skill-icon" style="--c1:#6e5494;--c2:#a855f7"><i class="fab fa-github"></i></div><span class="skill-name">GitHub</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">My Work</span>
+        <h2 class="section-title">Featured <span class="grad-text">Projects</span></h2>
+      </div>
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="clone">Clone</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <div class="project-card glass reveal" data-category="frontend">
+          <div class="project-header"><div class="project-icon"><i class="fas fa-palette"></i></div><div class="project-links"><a href="#" target="_blank"><i class="fab fa-github"></i></a><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div>
+          <h3 class="project-name">Personal Portfolio</h3>
+          <p class="project-desc">A modern, responsive portfolio website with glassmorphism design, smooth animations, and dark theme aesthetics.</p>
+          <div class="project-tags"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span></div>
+          <a href="#" target="_blank" class="project-demo-btn"><span>Live Demo</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card glass reveal" data-category="clone">
+          <div class="project-header"><div class="project-icon"><i class="fab fa-spotify"></i></div><div class="project-links"><a href="#" target="_blank"><i class="fab fa-github"></i></a><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div>
+          <h3 class="project-name">Spotify Clone</h3>
+          <p class="project-desc">A pixel-perfect UI clone of Spotify's web player with responsive layout and hover effects using pure HTML/CSS.</p>
+          <div class="project-tags"><span class="badge">HTML</span><span class="badge">CSS</span></div>
+          <a href="#" target="_blank" class="project-demo-btn"><span>Live Demo</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card glass reveal" data-category="frontend">
+          <div class="project-header"><div class="project-icon"><i class="fas fa-cloud-sun"></i></div><div class="project-links"><a href="#" target="_blank"><i class="fab fa-github"></i></a><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div>
+          <h3 class="project-name">Weather App</h3>
+          <p class="project-desc">Real-time weather application fetching data from OpenWeather API. Features city search and animated weather icons.</p>
+          <div class="project-tags"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">API</span></div>
+          <a href="#" target="_blank" class="project-demo-btn"><span>Live Demo</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card glass reveal" data-category="fullstack">
+          <div class="project-header"><div class="project-icon"><i class="fas fa-shopping-cart"></i></div><div class="project-links"><a href="#" target="_blank"><i class="fab fa-github"></i></a><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div>
+          <h3 class="project-name">E-Commerce UI</h3>
+          <p class="project-desc">A fully functional e-commerce frontend with product listing, cart functionality, filters, and MySQL database integration.</p>
+          <div class="project-tags"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><span class="badge">MySQL</span></div>
+          <a href="#" target="_blank" class="project-demo-btn"><span>Live Demo</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card glass reveal" data-category="clone">
+          <div class="project-header"><div class="project-icon"><i class="fab fa-netflix"></i></div><div class="project-links"><a href="#" target="_blank"><i class="fab fa-github"></i></a><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div>
+          <h3 class="project-name">Netflix Clone</h3>
+          <p class="project-desc">Netflix landing page clone with responsive design, hover effects on movie cards, and trailer modal popup.</p>
+          <div class="project-tags"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span></div>
+          <a href="#" target="_blank" class="project-demo-btn"><span>Live Demo</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card glass reveal" data-category="frontend">
+          <div class="project-header"><div class="project-icon"><i class="fas fa-tasks"></i></div><div class="project-links"><a href="#" target="_blank"><i class="fab fa-github"></i></a><a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a></div></div>
+          <h3 class="project-name">Task Manager</h3>
+          <p class="project-desc">A productivity task manager with local storage, drag-and-drop support, task categories, and deadline tracking.</p>
+          <div class="project-tags"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span></div>
+          <a href="#" target="_blank" class="project-demo-btn"><span>Live Demo</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CURRENTLY WORKING ON ========== -->
+  <section class="section working" id="working">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">In Progress</span>
+        <h2 class="section-title">Currently <span class="grad-text">Working On</span></h2>
+      </div>
+      <p class="working-intro reveal">I'm currently building a full-stack web application that combines my frontend skills with backend development. This is my most ambitious project yet!</p>
+      <div class="working-card glass reveal">
+        <div class="working-card-header">
+          <div class="working-icon"><i class="fas fa-rocket"></i></div>
+          <div>
+            <h3 class="working-title">Student Management System</h3>
+            <span class="status-badge pulse"><span class="pulse-dot"></span>In Progress</span>
+          </div>
+        </div>
+        <p class="working-desc">A comprehensive student management portal allowing institutes to manage students, attendance, grades, and reports. Built with a modern frontend and a backend powered by Node.js and MySQL.</p>
+        <div class="working-tags">
+          <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span>
+          <span class="badge badge-future">Node.js</span><span class="badge badge-future">MySQL</span><span class="badge badge-future">Express.js</span>
+        </div>
+        <div class="progress-section">
+          <div class="progress-item">
+            <div class="progress-label"><span><i class="fas fa-paint-brush"></i> Frontend</span><span class="progress-status done">Completed ✓</span></div>
+            <div class="progress-track"><div class="progress-fill" style="--pw:100%;--pc:#22c55e"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span><i class="fas fa-server"></i> Backend</span><span class="progress-status inprog">In Progress</span></div>
+            <div class="progress-track"><div class="progress-fill" style="--pw:45%;--pc:#a855f7"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span><i class="fas fa-cloud-upload-alt"></i> Deployment</span><span class="progress-status soon">Coming Soon</span></div>
+            <div class="progress-track"><div class="progress-fill" style="--pw:5%;--pc:#6366f1"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-badge">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="grad-text">Connect</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <!-- "Say Hello" block removed as requested -->
+          <p class="contact-tagline">Have a project idea, want to collaborate, or just want to connect? Fill the form and I'll get back to you directly on your email!</p>
+          <div class="contact-details">
+            <a href="mailto:shreyansprajapati7081@gmail.com" class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <div><span class="detail-label">Email</span><span class="detail-value">shreyansprajapati7081@gmail.com</span></div>
+            </a>
+            <a href="tel:+918957144876" class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+              <div><span class="detail-label">Phone</span><span class="detail-value">+91 8957144876</span></div>
+            </a>
+            <a href="https://wa.me/918957144876" target="_blank" class="contact-detail-item">
+              <div class="contact-detail-icon whatsapp-bg"><i class="fab fa-whatsapp"></i></div>
+              <div><span class="detail-label">WhatsApp</span><span class="detail-value">Click to Chat</span></div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <!-- Form sends mail via EmailJS / FormSubmit — replace endpoint as needed -->
+          <form class="contact-form glass" id="contactForm"
+                action="https://formsubmit.co/shreyansprajapati7081@gmail.com"
+                method="POST">
+            <!-- FormSubmit hidden config fields -->
+            <input type="hidden" name="_subject" value="New Portfolio Message from Contact Form" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-group">
+              <label for="cname">Full Name</label>
+              <div class="input-wrap"><i class="fas fa-user"></i><input type="text" id="cname" name="name" placeholder="Your full name" required /></div>
+            </div>
+            <div class="form-group">
+              <label for="cemail">Email Address</label>
+              <div class="input-wrap"><i class="fas fa-envelope"></i><input type="email" id="cemail" name="email" placeholder="your@email.com" required /></div>
+            </div>
+            <div class="form-group">
+              <label for="cmessage">Message</label>
+              <div class="input-wrap textarea-wrap"><i class="fas fa-comment-dots"></i><textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea></div>
+            </div>
+            <button type="submit" class="btn btn-primary send-btn">
+              <span id="sendBtnText">Send Message</span>
+              <i class="fas fa-paper-plane" id="sendBtnIcon"></i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i> Message sent! I'll reply to your email soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#home" class="logo"><span class="logo-bracket">&lt;</span><span class="logo-name">Shreyans</span><span class="logo-bracket">/&gt;</span></a>
+        <p class="footer-tagline">Crafting digital experiences with passion & code.</p>
+      </div>
+      <div class="footer-mid">
+        <nav class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#working">Working</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="https://github.com/"    target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/"  target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/918957144876" target="_blank" class="social-icon whatsapp-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <span class="grad-text">Shreyans Prajapati</span>. All rights reserved.</p>
+        <p>Made with <span style="color:#ec4899">♥</span> & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- Three.js (only needed for hero 3D) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
